@@ -12,13 +12,14 @@
 }
 
 :root {
-  --main-color: #033a80;
-  --bg-color: #fff;
-  --text-color: #0f0c27;
-  --hover: hsl(260, 100%, 51%);
+  --main-color: #355C7D;
+  --bg-color: #FFFFFF;
+  --text-color: #0D0907;
+  --hover: #4A90E2;
   --big-font: 3.2rem;
   --medium-font: 1.8rem;
   --p-font: 0.941rem;
+  --logo: #4A90E2;
 }
 
 section {
@@ -26,8 +27,8 @@ section {
 }
 
 body.active {
-  --text-color: #fff;
-  --bg-color: #0f0c27;
+  --text-color: #ffffff;
+  --bg-color: #011522;
 }
 
 body {
@@ -50,7 +51,7 @@ body {
 
 .heading span {
   font-size: var(--p-font);
-  color: rgb(2, 166, 70);
+  color: var(--logo);
 }
 
 header {
@@ -82,7 +83,7 @@ header.shadow {
 .logo span {
   font-size: 1.61rem;
   font-weight: 600;
-  color: crimson;
+  color: var(--logo);
 }
 
 .navbar {
@@ -110,6 +111,11 @@ header.shadow {
 #darkmode {
   font-size: 22px;
   cursor: pointer;
+  transition: color 0.4s, transform 0.6s cubic-bezier(.68, -0.55, .27, 1.55);
+}
+
+#darkmode:hover {
+  transform: rotate(-180deg) scale(1.1);
 }
 
 .home {
@@ -128,6 +134,7 @@ header.shadow {
 
 .home-img img {
   width: 100%;
+  border-radius: 30%;
 }
 
 .home-text span {
@@ -137,6 +144,12 @@ header.shadow {
 
 .home-text h1 {
   font-size: var(--big-font);
+}
+
+.home-text h1 #typed-nome,
+.home-text h1 .typed-cursor {
+  font-size: var(--big-font);
+  color: var(--logo);
 }
 
 .home-text h2 {
@@ -157,7 +170,7 @@ header.shadow {
 
 .social a {
   margin-bottom: 1rem;
-  font-size: 22px;
+  font-size: 30px;
   color: var(--text-color);
 }
 
@@ -187,7 +200,7 @@ header.shadow {
 
 .about-img img {
   width: 80%;
-  border-radius: 0.5rem;
+    border-radius: 20%;
 }
 
 .about-text p {
@@ -227,6 +240,7 @@ header.shadow {
   width: 80%;
   padding-left: 4rem;
   object-position: center;
+    border-radius: 20%;
 }
 
 .bars-box {
@@ -250,7 +264,7 @@ span {
   left: 0;
   width: 100%;
   height: 0.5rem;
-  background: hsla(260, 100%, 44%, 0.4);
+  background: #d8b4b46b;
   border-radius: 0.5rem;
 }
 
@@ -305,10 +319,11 @@ span {
   border-radius: 0.5rem;
   border-bottom: 2px solid var(--main-color);
   box-shadow: 0 2px 7px rgb(14 55 54 / 15%);
+  cursor: pointer;
 }
 
 .services-box:hover {
-  background-color: #02225a;
+  background-color: var(--hover);
 }
 
 .services-box h3 {
@@ -328,7 +343,7 @@ span {
 }
 
 .services-box:hover .bx {
-  color: #22cf91;
+  color: var(--bg-color);
 }
 
 .services-box a {
@@ -360,7 +375,7 @@ textarea {
   width: 100%;
   border: none;
   outline: none;
-  background: hsla(260, 100%, 44%, 0.1);
+  background: #4a91e236;
   margin-bottom: 1rem;
   color: var(--text-color);
 }
@@ -385,6 +400,7 @@ form textarea {
   letter-spacing: 1px;
   margin-left: 35%;
 }
+
 .contact-button:hover {
   background: var(--hover);
 }
@@ -413,6 +429,7 @@ form textarea {
   width: 40px;
   height: 40px;
 }
+
 .copyright {
   padding: 20px;
   background: var(--main-color);
@@ -519,14 +536,17 @@ form textarea {
   .skills-img img {
     padding-left: 0;
   }
+
   .skills-img {
     padding-top: 2rem;
     display: flex;
     justify-content: center;
   }
+
   .contact-form form {
     width: 300px;
   }
+
   .contact-button {
     margin-left: 25%;
   }

@@ -25,3 +25,17 @@ menu.onclick = () => {
 window.onscroll = () => {
     navbar.classList.remove('active');
 };
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    new Typed('#typed-nome', {
+        strings: ['José Elias'],
+        typeSpeed: 80,
+        backSpeed: 50,
+        backDelay: 1500,
+        startDelay: 500,
+        loop: true,
+        showCursor: true,
+        cursorChar: '|'
+    });
+});
